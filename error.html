@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Error page for a Polybotics weather app that tells you the current weather data of a specified location.">
+    <meta name="keywords" content="weather, polybotics, temperature, humidity">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./asset/TUBE-DOWNLINK-FAVICON.png" type="image/x-icon">
+    <title>Error</title>
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./asset/fontawesomepro/css/all.css">
+    <link rel="stylesheet" href="./asset/fontawesomepro/css/fontawesome.css">
+    <link rel="stylesheet" href="./css/error.css">
+</head>
+<body>
+    <main class="main pr">
+        <div class="img-cont fw flex ac jc pr"><i class="far fa-gears"></i></div>
+        <div class="text fw tc">OOPs SOMETHING WENT WRONG</div>
+        <div onclick="goHome()" class="link fw tc">Go Back Home</div>
+        <div class="copy-right fw tc">Version 1.0 ___ &copy; Polybotics 2023</div>
+    </main>
+    
+    <script>
+        function goHome(){
+            window.location = './index.html';
+        }
+    </script>
+</body>
+</html>

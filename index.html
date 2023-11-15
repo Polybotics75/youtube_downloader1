@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./asset/TUBE-DOWNLINK-FAVICON.png" type="image/x-icon">
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="./asset/fontawesomepro/css/all.css">
+    <link rel="stylesheet" href="./asset/fontawesomepro/css/fontawesome.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Tube DownLink</title>
+</head>
+<body>
+    <main class="main">
+        <nav class="nav fw flex ac jsb">
+            <span class="logo-tab flex ac"><span class="logo"><img src="./asset/TUBE-DOWNLINK-LOGO.png" alt="Logo"></span> DownLink</span>
+            <span class="theme-tab">
+                <div onclick="switchTheme(event)" id="light" class="theme-switch flex ac jc"></div>
+            </span>
+        </nav>
+        <div class="header fw tc ls">Tube DownLink</div>
+        <div class="header-tag fw tc ls">Download any youtube directly to your device in mp4 format</div>
+
+        <div class="inp-tab fw flex ac jsb">
+            <input type="text" placeholder="Ex. www.youtube.com/watch?v=1234" class="search-inp tc">
+            <button onclick="searchQuery(event)" class="search-btn"><i class="far fa-magnifying-glass"></i></button>
+        </div>
+        <div class="loading-tab fw ac jc">
+            <div class="loading">Retrieveing Data...</div>
+        </div>
+
+        <div class="video-tab hide fw">
+            <div class="video-thumbnail-tab fw flex ac jc">
+                <img src="" alt="Video Thumbnail" class="video-thumbnail">
+                <div class="video-length"></div>
+            </div>
+            <div class="video-details fw flex ac">
+                <div class="video-right fw">
+                    <div class="video-name fw ls"></div>
+                    <div class="video-author ls"></div>
+                    <div class="video-views-tab ls"><span class="video-views">0</span> views</div>
+                </div>
+            </div>
+        </div>
+        <div class="seperator hide fw ac jc"></div>
+        <div class="link-list fw"></div>
+
+        <div class="inst-seperator flex ac jc"></div>
+        <ul class="inst-link-tab fw">
+            <li class="inst-link">Paste YouTube video link into the search box and click the button.</li>
+            <li class="inst-link">Choose the mp4 video quality you want, then click the download button.</li>
+            <li class="inst-link">Wait for the conversion to complete and the choosen video will load on screen.</li>
+            <li class="inst-link">Click on the <i class="far fa-ellipsis-vertical"></i> menu icon at the bottom right side of the video and tap on download.</li>
+            <li class="inst-link">Wait a couple of seconds for your video to start downloading.</li>
+            <li class="inst-link">NOTE: Depending on your device, it may take close to 30seconds for the video to start downloading.</li>
+        </ul>
+
+
+        <div class="output ac jc">
+            <i class="far fa-gears"></i> Something went wrong
+        </div>
+    </main>
+
+    <!--SCRIPT-->
+    <script src="./js/theme.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/download.js"></script>
+</body>
+</html>

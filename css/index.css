@@ -1,0 +1,392 @@
+body#dark{
+    --white: #121212;
+    --black: #f7f7f7;
+    --pale: #ccc;
+    --dpale: #999090;
+}
+
+body#light{
+    --white: #fff;
+    --black: #121212;
+    --pale: #999696;
+    --dpale: #363636;
+}
+
+main.main{
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    background: var(--white);
+}
+
+main.main::-webkit-scrollbar{
+    display: none;
+}
+
+nav.nav{
+    height: 3rem;
+    border-bottom: 0.3px solid var(--pale);
+    padding: 0 1rem;
+}
+
+.logo-tab{
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.logo{
+    width: 2.7rem;
+    height: 2.7rem;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.logo img{
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+}
+
+.theme-tab{
+    width: 2.7rem;
+    height: 1rem;
+    background: #ccc;
+    border-radius: 1.3rem;
+    position: relative;
+}
+
+.theme-switch{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 0.3px solid #ccc;
+    font-size: 14px;
+    position: absolute;
+    top: -0.25rem;
+}
+
+.theme-switch#light{
+    background: var(--white);
+    color: #f7f307;
+    animation-name: goToLight;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+.theme-switch#dark{
+    background: var(--white);
+    color: #fff;
+    animation-name: goToDark;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    right: -0.2rem;
+}
+
+@keyframes goToLight {
+    0%{
+        right: -0.1rem;
+    }
+
+    20%{
+        right: 0.25rem;
+    }
+
+    30%{
+        right: 0.45rem;
+    }
+
+    50%{
+        right: 0.75rem;
+    }
+
+    70%{
+        right: 1.15rem;
+    }
+
+    90%{
+        right: 1.5rem;
+    }
+
+    100%{
+        left: -0.2rem;
+    }
+}
+
+@keyframes goToDark {
+    0%{
+        left: -0.1rem;
+    }
+
+    20%{
+        left: 0.25rem;
+    }
+
+    30%{
+        left: 0.45rem;
+    }
+
+    50%{
+        left: 0.75rem;
+    }
+
+    70%{
+        left: 1.15rem;
+    }
+
+    90%{
+        left: 1.5rem;
+    }
+
+    100%{
+        right: -0.2rem;
+    }
+}
+
+.header{
+    font-size: 24px;
+    color: var(--dpale);
+    font-weight: 400;
+    padding: 3rem 0 1rem;
+}
+
+.header-tag{
+    font-size: 14px;
+    color: var(--dpale);
+    padding: 0 0 1.5rem;
+}
+
+.inp-tab{
+    padding: 0 1rem;
+}
+
+.search-inp{
+    width: calc(100% - 3.2rem);
+    height: 2.7rem;
+    font-size: 14px;
+    color: var(--dpale);
+    border: 0.3px solid var(--dpale);
+    border-radius: 1.3rem;
+    background: transparent;
+}
+
+.search-btn{
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    border: 0.3px solid var(--primary);
+    background: var(--secondary);
+    color: var(--primary);
+    font-size: 20px;
+    margin-left: 0.5rem;
+}
+
+.search-btn.active{
+    background: var(--primary);
+    color: var(--pale);
+}
+
+.loading-tab{
+    display: none;
+}
+
+.loading-tab.searching{
+    display: flex;
+    padding: 0.5rem 0 0;
+}
+
+.loading{
+    background: var(--secondary);
+    border: 0.3px solid var(--primary);
+    border-radius: 0.3rem;
+    color: var(--primary);
+    font-size: 14px;
+    padding: 0.4rem 1.2rem;
+}
+
+.video-tab{
+    padding: 2rem 1rem;
+}
+
+.video-tab.hide{
+    display: none;
+}
+
+.video-tab.show{
+    display: block;
+}
+
+.video-thumbnail-tab{
+    height: 10rem;
+    background: var(--black);
+    border-radius: 0.6rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-thumbnail-tab img.video-thumbnail{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.video-length{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.3rem;
+    background: rgba(0,0,0,0.9);
+    color: var(--pale);
+    font-size: 14px;
+    letter-spacing: 1.3px;
+}
+
+.video-details{
+    padding: 0.7rem 0;
+}
+
+.video-right{
+    padding: 0;
+}
+
+.video-name{
+    padding: 0rem 0 0.5rem;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dpale);
+}
+
+.video-author{
+    font-size: 14px;
+    color: var(--pale);
+}
+
+.video-views-tab{
+    padding: 0.3rem 0;
+    font-size: 14px;
+    color: var(--dpale);
+}
+
+.seperator{
+    height: 0.2px;
+    border: 0;
+    background: var(--dpale);
+}
+
+.seperator::before{
+    content: "Available Download Links";
+    padding: 5px 7px;
+    background: var(--white);
+    color: var(--dpale);
+    font-size: 13px;
+    letter-spacing: 0.9px;
+}
+
+.seperator.hide{
+    display: none;
+}
+
+.seperator.show{
+    display: flex;
+}
+
+.link-list{
+    padding: 1rem 0.5rem 0;
+}
+
+.link-tab{
+    width: 100%;
+    height: 4rem;
+    padding: 0.5rem 0.7rem;
+    margin: 0.7rem 0;
+    border: 0.3px solid var(--dpale);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-pixel{
+    font-size: 16px;
+    color: var(--dpale);
+}
+
+.link-type{
+    font-size: 14px;
+    color: var(--pale);
+}
+
+.link-download{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 6px;
+    background: var(--primary);
+    font-size: 18px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.inst-seperator{
+    height: 0.3px;
+    width: calc(100% - 1rem);
+    background: var(--dpale);
+    margin: 2rem 0.5rem 1rem;
+}
+
+.inst-seperator::before{
+    content: 'How to Download YouTube Videos?';
+    font-size: 16px;
+    color: var(--black);
+    background: var(--white);
+    padding: 0.3rem 0.7rem;
+}
+
+.inst-link-tab{
+    padding: 1.5rem 0.7rem;
+}
+
+.inst-link{
+    list-style-type: disclosure-closed;
+    list-style-position: inside;
+    font-size: 14px;
+    color: var(--dpale);
+    padding: 0.5rem 0;
+    line-height: 20px;
+}
+
+.output{
+    position: fixed;
+    bottom: 1rem;
+    left: 0.5rem;
+    height: 3rem;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 1.5s ease maxHeight;
+}
+
+.output.show{
+    display: flex;
+    max-height: 3rem;
+    
+    width: calc(100% - 1rem);
+    border-radius: 1.3rem;
+    background: var(--primary);
+    font-size: 16px;
+    color: var(--white);
+}
+
+.output.show i{
+    padding: 0 5px 0 0;
+}
+
+iframe.download-frame{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+}

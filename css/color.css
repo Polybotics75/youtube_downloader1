@@ -1,0 +1,66 @@
+:root{
+    --primary: #810791;
+    --secondary: #8107911a;
+    --pale: #999696;
+    --dpale: #363636;
+    --black: #121212;
+    --white: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input,
+button{
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.ac{
+    align-items: center;
+}
+
+.jc{
+    justify-content: center;
+}
+
+.jsb{
+    justify-content: space-between;
+}
+
+.tc{
+    text-align: center;
+}
+
+.pr{
+    padding: 1rem;
+}
+
+.fw{
+    width: 100%;
+}
+
+.fh{
+    height: 100%;
+}
+
+.ls{
+    letter-spacing: 0.8px;
+}
